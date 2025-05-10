@@ -79,7 +79,6 @@ export default function Portfolio() {
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
               <li>Information hidden because paper in progress.</li>
             </ul>
-            <img src="images/scillm.gif" alt="Scientific Chatbot Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
           </div>
 
           <div className="mb-6 p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
@@ -116,8 +115,8 @@ export default function Portfolio() {
                  <li>Proposed targeted subsidized programs and flexible childcare solutions</li>
                  <li>Created implementation strategies for improving enrollment access and equity</li>
               </ul>
-              <a href="/files/early-education-study.pdf" download className="inline-block mt-3 text-blue-600 hover:underline text-sm">
-                📥 Download Full Slide Deck (PPTX)
+              <a href="files/early-education-study.pdf" download className="inline-block mt-3 text-blue-600 hover:underline text-sm">
+                📥 Download Full Slide Deck (pdf)
               </a>
           </div>
 

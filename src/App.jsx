@@ -77,7 +77,7 @@ export default function Portfolio() {
             <h3 className="text-xl font-semibold mb-1">Scientific Chatbot – Q&A</h3>
             <p>Built a domain-specific chatbot using Agentic Retrieval-Augmented Generation (RAG) to answer queries on scientific documentation.</p>
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li>Information hidden because paper in progress.</li>
+              <img src="images/scillm.gif" alt="Posture App Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
             </ul>
           </div>
 

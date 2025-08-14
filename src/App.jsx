@@ -45,6 +45,8 @@ export default function Portfolio() {
             <a href="mailto:zarintasnim14@gmail.com" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Mail size={32} /></a>
             <a href="https://linkedin.com/in/zarin-shejuti-6673b2172" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Linkedin size={32} /></a>
             <a href="https://github.com/ZarTShe" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Github size={32} /></a>
+            <a href="/portfolio/Resume-Zarin.pdf" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV">📄 View My Resume<FileText size={32} /></a>
+          
           </div>
         </header>
 

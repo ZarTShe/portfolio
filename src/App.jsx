@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,6 +45,7 @@ export default function Portfolio() {
             <a href="mailto:zarintasnim14@gmail.com" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Mail size={32} /></a>
             <a href="https://linkedin.com/in/zarin-shejuti-6673b2172" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Linkedin size={32} /></a>
             <a href="https://github.com/ZarTShe" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Github size={32} /></a>
+            <a href="/Resume-Zarin.pdf" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV"><FileText size={32} /></a>
           </div>
         </header>
 
@@ -77,7 +78,7 @@ export default function Portfolio() {
             <h3 className="text-xl font-semibold mb-1">Scientific Chatbot – Q&A</h3>
             <p>Built a domain-specific chatbot using Agentic Retrieval-Augmented Generation (RAG) to answer queries on scientific documentation.</p>
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li>Information hidden because paper in progress.</li>
+               <img src="images/scillm.gif" alt="Chatbot App Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
             </ul>
           </div>
 

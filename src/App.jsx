@@ -46,6 +46,7 @@ export default function Portfolio() {
             <a href="https://linkedin.com/in/zarin-shejuti-6673b2172" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Linkedin size={32} /></a>
             <a href="https://github.com/ZarTShe" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Github size={32} /></a>
              <a href="https://drive.google.com/file/d/1alYqZvtrxqJnXrsKDnBh4s4O_yyvYL2k/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV"><FileText size={32} /></a>
+             <a href="https://drive.google.com/file/d/1e72SbO3_teEX_tenVdpqOiSrWwkwJHww/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV"><FileText size={32} /></a>
           </div>
         </header>
 

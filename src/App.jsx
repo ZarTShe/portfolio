@@ -78,14 +78,18 @@ export default function Portfolio() {
             <h3 className="text-xl font-semibold mb-1">Scientific Chatbot – Q&A</h3>
             <p>Built a domain-specific chatbot using Agentic Retrieval-Augmented Generation (RAG) to answer queries on scientific documentation.</p>
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li>Information hidden because paper in progress.</li>
+              <li>Paper accepted for oral presentation at ICMLA 2025</li>
+              <li>Introduced PageLocQA, a lightweight and modular retrieval-augmented generation (RAG) framework designed for page-level source attribution in long-document question answering.</li>
+              <li>PageLocQA uses manual tool routing combined with structured prompting, enabling precise answer generation and accurate citation of page-level evidence.</li>
             </ul>
+            <img src="images/scillm.gif" alt="Posture App Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
           </div>
 
           <div className="mb-6 p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
             <h3 className="text-xl font-semibold mb-1">Posture Detection Android App</h3>
             <p>Developed a real-time posture classification model using smartphone sensors to assist healthcare workers in community clinics.</p>
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
+              <li><a href="https://ieeexplore.ieee.org/document/10971620" target="_blank">Link to Paper</a> </li>
               <li>Compared deep learning and traditional ML models</li>
               <li>Analyzed latency, accuracy, and memory usage</li>
               <li>Optimized for smartphone deployment</li>
@@ -100,7 +104,7 @@ export default function Portfolio() {
             <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
               <li>Handled sparse RSSI values using neighbor interpolation</li>
               <li>Improved path accuracy in indoor settings</li>
-              <li>Written in Python and deployed in community clinic</li>
+              <li>Written in Python and deployed in a community clinic</li>
             </ul>
             <img src="images/download.png" alt="RSSI Path Calculation" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
           </div>
@@ -118,7 +122,7 @@ export default function Portfolio() {
               </ul>
               <img src="images/early childcare.png" alt="Early Childcare" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
               <a href="files/early-education-study.pdf" download className="inline-block mt-3 text-blue-600 hover:underline text-sm">
-                📥 Download Full Slide Deck (pdf)
+                📥 Download Full Slide Deck (PDF)
               </a>
           </div>
 

@@ -1,135 +1,96 @@
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, ImageIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Portfolio() {
-  const [loading, setLoading] = useState(true);
+const researchInterests = [
+  "Wireless Sensing and End-to-End Systems for Elderly Patient Care",
+  "mmWave Radar Sensing and Human Activity Recognition",
+  "Edge AI and Resource-Constrained Machine Learning",
+  "Efficient and Secure AI Systems",
+  "Deep Neural Networks and Spiking Neural Networks",
+  "Large Language Models and Retrieval-Augmented Generation",
+  "Source Attribution and Document Question Answering",
+];
+
+// Add your project images to public/images/ using these filenames,
+// or change the src values to match your own files. Until then, the
+// reserved image areas display a placeholder instead of a broken image.
+const ongoingProjects = [
+  {
+    title: "Bed-Exit Detection with mmWave Radar and Camera Data",
+    description:
+      "An ongoing project investigating bed-exit detection with mmWave radar and a camera, as part of research on sensing systems that support elderly patient care.",
+    details: [
+      "My contribution: developed a direction-based feature and an XGBoost classifier for bed-exit detection.",
+      "Work with radar and camera data to investigate movement associated with bed-exit events.",
+      "Collaborator contribution: CNN-BiLSTM modeling of dynamic range-angle data within the joint project.",
+    ],
+    // Add the verified headline metric and evaluation protocol when available.
+    images: [
+      {
+        src: "images/bed-exit-setup.png",
+        alt: "mmWave radar and camera setup for the bed-exit detection project",
+        caption: "Sensing setup",
+      },
+      {
+        src: "images/bed-exit-results.png",
+        alt: "Direction-feature visualization or evaluation results for bed-exit detection",
+        caption: "Feature visualization and results",
+      },
+    ],
+  },
+  {
+    title: "EdgeDefenseShield",
+    description:
+      "An ongoing study of deep neural networks (DNNs) and spiking neural networks (SNNs) under payload constraints, with a focus on practical evaluation for edge-AI systems.",
+    details: [
+      "Develop a controlled DNN-versus-SNN evaluation protocol using payload-constrained features.",
+      "Investigate model behavior and the tradeoffs relevant to resource-constrained deployment.",
+      "Prepare on-device evaluation on NVIDIA Jetson Orin Nano to measure inference performance and resource use.",
+    ],
+    // Add measured latency, memory, power/energy, and accuracy only after
+    // the hardware evaluation is complete.
+    images: [
+      {
+        src: "images/edgedefenseshield-pipeline.png",
+        alt: "EdgeDefenseShield evaluation pipeline comparing DNN and SNN approaches",
+        caption: "Evaluation pipeline",
+      },
+      {
+        src: "images/edgedefenseshield-jetson.png",
+        alt: "Jetson Orin Nano setup or on-device benchmarking results",
+        caption: "Edge hardware and benchmarking",
+      },
+    ],
+  },
+];
+
+function ProjectImage({ src, alt, caption, compact = false }) {
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
-      </div>
-    );
-  }
+    setFailed(false);
+  }, [src]);
 
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat p-8 text-gray-800 overflow-hidden"
-      style={{ backgroundImage: "url('/images/background.png')" }}
-      data-aos="fade-up"
-    >
-
-      {/* Main Content */}
-      <div className="relative z-10">
-
-        {/* Header */}
-        <header className="text-center mb-12" data-aos="fade-down">
-          <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-4xl font-bold mb-2">Zarin Shejuti</h1>
-            <p className="text-lg">AI/ML Researcher | Master's Student | LLM Enthusiast</p>
-          </div>
-
-          <div className="mt-4 flex justify-center gap-6">
-            <a href="mailto:zarintasnim14@gmail.com" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Mail size={32} /></a>
-            <a href="https://linkedin.com/in/zarin-shejuti-6673b2172" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Linkedin size={32} /></a>
-            <a href="https://github.com/ZarTShe" className="hover:scale-125 transition-transform duration-300 ease-in-out"><Github size={32} /></a>
-             <a href="https://drive.google.com/file/d/1alYqZvtrxqJnXrsKDnBh4s4O_yyvYL2k/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV"><FileText size={32} /></a>
-             <a href="https://drive.google.com/file/d/1e72SbO3_teEX_tenVdpqOiSrWwkwJHww/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300 ease-in-out" title="Download CV"><FileText size={32} /></a>
-          </div>
-        </header>
-
-        {/* About Me */}
-        <section className="mb-12" data-aos="fade-up">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <p>
-            I am a Master's student in Computer Science at Winston-Salem State University,
-            graduating Fall 2025. My research focuses on real-world applications of AI and machine learning.
-          </p>
-        </section>
-
-        {/* Research Interests */}
-        <section className="mb-12" data-aos="fade-up">
-          <h2 className="text-2xl font-semibold mb-4">Research Interests</h2>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Large Language Models (LLMs)</li>
-            <li>Retrieval-Augmented Generation (RAG)</li>
-            <li>Agentic RAG</li>
-            <li>Edge Computing & Mobile AI</li>
-            <li>Human Activity Recognition (HAR)</li>
-          </ul>
-        </section>
-
-        {/* Projects */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4" data-aos="fade-up">Projects</h2>
-
-          <div className="mb-6 p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
-            <h3 className="text-xl font-semibold mb-1">Scientific Chatbot – Q&A</h3>
-            <p>Built a domain-specific chatbot using Agentic Retrieval-Augmented Generation (RAG) to answer queries on scientific documentation.</p>
-            <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li>Paper accepted for oral presentation at ICMLA 2025</li>
-              <li>Introduced PageLocQA, a lightweight and modular retrieval-augmented generation (RAG) framework designed for page-level source attribution in long-document question answering.</li>
-              <li>PageLocQA uses manual tool routing combined with structured prompting, enabling precise answer generation and accurate citation of page-level evidence.</li>
-            </ul>
-            <img src="images/scillm.gif" alt="Posture App Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
-          </div>
-
-          <div className="mb-6 p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
-            <h3 className="text-xl font-semibold mb-1">Posture Detection Android App</h3>
-            <p>Developed a real-time posture classification model using smartphone sensors to assist healthcare workers in community clinics.</p>
-            <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li><a href="https://ieeexplore.ieee.org/document/10971620" target="_blank">Link to Paper</a> </li>
-              <li>Compared deep learning and traditional ML models</li>
-              <li>Analyzed latency, accuracy, and memory usage</li>
-              <li>Optimized for smartphone deployment</li>
-              <li>Model training performed using Python; deployment via Android Studio</li>
-            </ul>
-            <img src="images/postureApp.gif" alt="Posture App Demo" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
-          </div>
-
-          <div className="p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
-            <h3 className="text-xl font-semibold mb-1">RSSI Path Calculation using Nearest Neighbor</h3>
-            <p>Implemented a nearest neighbor-based RSSI signal imputation system to track movement across rooms using smartphone Bluetooth signals.</p>
-            <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-              <li>Handled sparse RSSI values using neighbor interpolation</li>
-              <li>Improved path accuracy in indoor settings</li>
-              <li>Written in Python and deployed in a community clinic</li>
-            </ul>
-            <img src="images/download.png" alt="RSSI Path Calculation" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
-          </div>
-
-          <div className="mb-6 p-4 border rounded-lg shadow bg-white/70 backdrop-blur-sm" data-aos="fade-up">
-            <h3 className="text-xl font-semibold mb-1">Early Education Enrollment Study – Forsyth County, Winston-Salem, NC</h3>
-              <p>Conducted a data-driven analysis to identify socioeconomic factors influencing early education
-                enrollment rates across 34 low-scoring census tracts in Forsyth County, NC.
-              </p>
-              <ul className="list-disc ml-6 mt-2 space-y-1 text-sm">
-                 <li>Used socioeconomic, education, and occupational datasets for analysis</li>
-                 <li>Identified income, single parent status, and job type as key indicators</li>
-                 <li>Proposed targeted subsidized programs and flexible childcare solutions</li>
-                 <li>Created implementation strategies for improving enrollment access and equity</li>
-              </ul>
-              <img src="images/early childcare.png" alt="Early Childcare" className="rounded-lg shadow-md mt-4 w-full max-w-xs mx-auto max-h-80 object-contain" />
-              <a href="files/early-education-study.pdf" download className="inline-block mt-3 text-blue-600 hover:underline text-sm">
-                📥 Download Full Slide Deck (PDF)
-              </a>
-          </div>
-
-        </section>
-      </div>
-
-    </div>
-  );
-}
+    <figure className="min-w-0">
+      <div
+        className={`flex items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 ${
+          compact ? "mx-auto w-full max-w-xs" : "aspect-[16/10] w-full"
+        }`}
+      >
+        {src && !failed ? (
+          <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            onError={() => setFailed(true)}
+            className={
+              compact
+                ? "max-h-80 w-full object-contain"
+                : "h-full w-full object-contain"
+            }
+          />
+        ) : (
+          <div className="flex min-h-48 flex-col items-center justify-center gap-2 p-6 text-center text-gray-500">

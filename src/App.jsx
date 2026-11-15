@@ -18,7 +18,7 @@ const researchInterests = [
 // reserved image areas display a placeholder instead of a broken image.
 const ongoingProjects = [
   {
-    title: "Bed-Exit Detection with mmWave Radar and Camera Data",
+    title: "MiExit: Contactless and Intelligent Multimodal Bed-Exit Detection Towards Inpatient Safety",
     description:
       "An ongoing project investigating bed-exit detection with mmWave radar and a camera, as part of research on sensing systems that support elderly patient care.",
     details: [
@@ -36,7 +36,7 @@ const ongoingProjects = [
     ],
   },
   {
-    title: "EdgeDefenseShield",
+    title: "EdgeDefenseShield: Controlled DNN-SNN Neural Architecture Search for Multimodal Edge Threat Detection",
     description:
       "An ongoing study of deep neural networks (DNNs) and spiking neural networks (SNNs) under payload constraints, with a focus on practical evaluation for edge-AI systems.",
     details: [
@@ -203,7 +203,7 @@ export default function Portfolio() {
               <Github size={28} aria-hidden="true" />
             </a>
             
-            <a href="https://drive.google.com/file/d/1qZcGgTJFBcGwZfpgnhbwkDzNJve8Q-lb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
+            <a href="https://drive.google.com/file/d/1jXKGy01y0bLEBGoyAdUrP7EZYhuqZAyj/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
               <FileText size={28} aria-hidden="true" /><span className="text-xs">CV</span>
             </a>
           </nav>

@@ -61,7 +61,7 @@ const ongoingProjects = [
   },
 ];
 
-function ProjectImage({ src, alt, caption, compact = false }) {
+function ProjectImage({ src, alt, caption }) {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
@@ -69,32 +69,56 @@ function ProjectImage({ src, alt, caption, compact = false }) {
   }, [src]);
 
   return (
-    <figure className="min-w-0">
-      <div
-        className="h-full w-full object-contain"
-      >
-        {src && !failed ? (
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            onError={() => setFailed(true)}
-            className={
-              compact
-                ? "max-h-80 w-full object-contain"
-                : "h-full w-full object-contain"
-            }
-          />
-        ) : (
-          <div className="flex min-h-48 flex-col items-center justify-center gap-2 p-6 text-center text-gray-500">
-            <ImageIcon size={32} aria-hidden="true" />
-            <span className="text-sm font-medium">{caption}</span>
-            <span className="text-xs">Project visual coming soon</span>
-          </div>
-        )}
-      </div>
-      {caption && src && !failed && (
-        <figcaption className="mt-2 text-center text-sm text-gray-600">
+    <figure
+      style={{
+        width: "100%",
+        maxWidth: "300px",
+        margin: "16px auto",
+      }}
+    >
+      {src && !failed ? (
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          onError={() => setFailed(true)}
+          style={{
+            display: "block",
+            width: "100%",
+            height: "180px",
+            objectFit: "contain",
+            borderRadius: "8px",
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            height: "180px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#f3f4f6",
+            border: "1px dashed #9ca3af",
+            borderRadius: "8px",
+            color: "#6b7280",
+            textAlign: "center",
+            padding: "12px",
+            boxSizing: "border-box",
+          }}
+        >
+          Image unavailable
+        </div>
+      )}
+
+      {caption && (
+        <figcaption
+          style={{
+            marginTop: "8px",
+            textAlign: "center",
+            fontSize: "13px",
+            color: "#6b7280",
+          }}
+        >
           {caption}
         </figcaption>
       )}

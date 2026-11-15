@@ -202,8 +202,8 @@ export default function Portfolio() {
             <a href="https://github.com/ZarTShe" target="_blank" rel="noopener noreferrer" className={iconClass} aria-label="GitHub profile" title="GitHub">
               <Github size={28} aria-hidden="true" />
             </a>
-            {/* Existing CV links retained. Update them if your latest CV has moved. */}
-            <a href="https://drive.google.com/file/d/1alYqZvtrxqJnXrsKDnBh4s4O_yyvYL2k/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
+            
+            <a href="https://drive.google.com/file/d/1qZcGgTJFBcGwZfpgnhbwkDzNJve8Q-lb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
               <FileText size={28} aria-hidden="true" /><span className="text-xs">CV</span>
             </a>
           </nav>

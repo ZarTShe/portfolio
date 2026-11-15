@@ -29,7 +29,7 @@ const ongoingProjects = [
     // Add the verified headline metric and evaluation protocol when available.
     images: [
       {
-        src: "images/bed-exit-setup.png",
+        src: "images/bed_exit.png",
         alt: "mmWave radar and camera setup for the bed-exit detection project",
         caption: "Sensing setup",
       },

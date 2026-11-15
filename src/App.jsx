@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const researchInterests = [
-  "Wireless Sensing and End-to-End Systems for Elderly Patient Care",
+  "Wireless Sensing and End-to-End Systems for Inpatient Safety",
   "mmWave Radar Sensing and Human Activity Recognition",
   "Edge AI and Resource-Constrained Machine Learning",
   "Efficient and Secure AI Systems",
@@ -203,7 +203,7 @@ export default function Portfolio() {
               <Github size={28} aria-hidden="true" />
             </a>
             
-            <a href="https://drive.google.com/file/d/1jXKGy01y0bLEBGoyAdUrP7EZYhuqZAyj/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
+            <a href="https://drive.google.com/file/d/10GSySDE4Oq-oO8wTh0qCRmkMIl0xqwkV/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
               <FileText size={28} aria-hidden="true" /><span className="text-xs">CV</span>
             </a>
           </nav>

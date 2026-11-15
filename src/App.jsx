@@ -72,7 +72,7 @@ function ProjectImage({ src, alt, caption }) {
     <figure
       style={{
         width: "100%",
-        maxWidth: "550px",
+        maxWidth: "850px",
         margin: "16px auto",
       }}
     >
@@ -85,7 +85,7 @@ function ProjectImage({ src, alt, caption }) {
           style={{
             display: "block",
             width: "100%",
-            height: "320px",
+            height: "500px",
             objectFit: "contain",
             borderRadius: "8px",
           }}
@@ -93,7 +93,7 @@ function ProjectImage({ src, alt, caption }) {
       ) : (
         <div
           style={{
-            height: "320px",
+            height: "500px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

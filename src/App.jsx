@@ -206,9 +206,6 @@ export default function Portfolio() {
             <a href="https://drive.google.com/file/d/1alYqZvtrxqJnXrsKDnBh4s4O_yyvYL2k/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View CV" title="View CV">
               <FileText size={28} aria-hidden="true" /><span className="text-xs">CV</span>
             </a>
-            <a href="https://drive.google.com/file/d/1e72SbO3_teEX_tenVdpqOiSrWwkwJHww/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`${iconClass} inline-flex items-center gap-1`} aria-label="View alternate CV" title="View alternate CV">
-              <FileText size={28} aria-hidden="true" /><span className="text-xs">Alternate CV</span>
-            </a>
           </nav>
         </header>
 
@@ -298,18 +295,7 @@ export default function Portfolio() {
                 </ul>
                 <div className="mt-5"><ProjectImage src="images/download.png" alt="Indoor mobility paths reconstructed from Bluetooth RSSI data" caption="Bluetooth RSSI mobility tracking" compact /></div>
               </article>
-
-              <article className={cardClass} data-aos="fade-up">
-                <h3 className="mb-2 text-xl font-semibold">Early Education Enrollment Study — Forsyth County, NC</h3>
-                <p>Conducted a data-driven analysis of socioeconomic factors influencing early education enrollment across 34 low-scoring census tracts in Forsyth County, North Carolina.</p>
-                <ul className="ml-6 mt-3 list-disc space-y-2 text-sm">
-                  <li>Analyzed socioeconomic, education, and occupational datasets.</li>
-                  <li>Identified income, single-parent status, and job type as key indicators.</li>
-                  <li>Proposed targeted subsidies and flexible childcare options to improve enrollment access and equity.</li>
-                </ul>
-                <div className="mt-5"><ProjectImage src="images/early childcare.png" alt="Findings from the Forsyth County early education enrollment study" caption="Early education enrollment study" compact /></div>
-                <a href="files/early-education-study.pdf" download className="mt-4 inline-block rounded-sm text-sm text-blue-700 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">Download full slide deck (PDF)</a>
-              </article>
+              
             </div>
           </section>
         </main>

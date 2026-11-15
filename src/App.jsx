@@ -48,7 +48,7 @@ const ongoingProjects = [
     // the hardware evaluation is complete.
     images: [
       {
-        src: "images/snn_dnn.png",
+        src: "images/snn_dnn.PNG",
         alt: "EdgeDefenseShield evaluation pipeline comparing DNN and SNN approaches",
         caption: "Evaluation pipeline",
       },
@@ -72,7 +72,7 @@ function ProjectImage({ src, alt, caption }) {
     <figure
       style={{
         width: "100%",
-        maxWidth: "300px",
+        maxWidth: "550px",
         margin: "16px auto",
       }}
     >
@@ -85,7 +85,7 @@ function ProjectImage({ src, alt, caption }) {
           style={{
             display: "block",
             width: "100%",
-            height: "180px",
+            height: "320px",
             objectFit: "contain",
             borderRadius: "8px",
           }}
@@ -93,7 +93,7 @@ function ProjectImage({ src, alt, caption }) {
       ) : (
         <div
           style={{
-            height: "180px",
+            height: "320px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

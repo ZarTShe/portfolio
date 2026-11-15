@@ -31,7 +31,7 @@ const ongoingProjects = [
       {
         src: "images/bed_exit.PNG",
         alt: "mmWave radar and camera setup for the bed-exit detection project",
-        caption: "Sensing setup",
+        caption: "Camera Prediction",
       },
     ],
   },
@@ -48,14 +48,14 @@ const ongoingProjects = [
     // the hardware evaluation is complete.
     images: [
       {
-        src: "images/snn_dnn.PNG",
+        src: "images/snn_dnn.png",
         alt: "EdgeDefenseShield evaluation pipeline comparing DNN and SNN approaches",
         caption: "Evaluation pipeline",
       },
       {
-        src: "images/snn_dnn_result.png",
+        src: "images/snn_dnn_result.PNG",
         alt: "Jetson Orin Nano setup or on-device benchmarking results",
-        caption: "Edge hardware and benchmarking",
+        caption: "Performance Comparison for Different Payloads",
       },
     ],
   },

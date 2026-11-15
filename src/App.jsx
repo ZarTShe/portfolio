@@ -29,14 +29,9 @@ const ongoingProjects = [
     // Add the verified headline metric and evaluation protocol when available.
     images: [
       {
-        src: "images/bed-exit-setup.png",
+        src: "images/bed_exit.png",
         alt: "mmWave radar and camera setup for the bed-exit detection project",
         caption: "Sensing setup",
-      },
-      {
-        src: "images/bed-exit-results.png",
-        alt: "Direction-feature visualization or evaluation results for bed-exit detection",
-        caption: "Feature visualization and results",
       },
     ],
   },
@@ -53,12 +48,12 @@ const ongoingProjects = [
     // the hardware evaluation is complete.
     images: [
       {
-        src: "images/edgedefenseshield-pipeline.png",
+        src: "images/snn_dnn.png",
         alt: "EdgeDefenseShield evaluation pipeline comparing DNN and SNN approaches",
         caption: "Evaluation pipeline",
       },
       {
-        src: "images/edgedefenseshield-jetson.png",
+        src: "images/snn_dnn_result.png",
         alt: "Jetson Orin Nano setup or on-device benchmarking results",
         caption: "Edge hardware and benchmarking",
       },

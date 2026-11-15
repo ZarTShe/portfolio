@@ -29,7 +29,7 @@ const ongoingProjects = [
     // Add the verified headline metric and evaluation protocol when available.
     images: [
       {
-        src: "images/bed_exit.png",
+        src: "images/bed_exit.PNG",
         alt: "mmWave radar and camera setup for the bed-exit detection project",
         caption: "Sensing setup",
       },
@@ -71,9 +71,7 @@ function ProjectImage({ src, alt, caption, compact = false }) {
   return (
     <figure className="min-w-0">
       <div
-        className={`flex items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 ${
-          compact ? "mx-auto w-full max-w-xs" : "aspect-[16/10] w-full"
-        }`}
+        className="h-full w-full object-contain"
       >
         {src && !failed ? (
           <img
